@@ -8,12 +8,10 @@
 import Foundation
 
 struct ReverseModel {
-    
     func reverseString(_ words: String) -> String {
         let result = words.components(separatedBy: " ")
             .map { $0.reversed() }
             .joined(separator: " ")
-        
         return String(result)
     }
 }

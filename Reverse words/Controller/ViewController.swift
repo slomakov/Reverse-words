@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     let reverseModel = ReverseModel()
 
     @IBOutlet weak var reverseButton: UIButton!
@@ -44,7 +43,6 @@ class ViewController: UIViewController {
         sender.text = sender.text
         guard
           let text = textToReverseTextField.text, !text.isEmpty
-          
           else
         {
           reverseButton.isEnabled = false
@@ -53,4 +51,3 @@ class ViewController: UIViewController {
         reverseButton.isEnabled = true
        }
 }
-
