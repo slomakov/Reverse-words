@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E557709229D0DDA000EA8B6D /* UIButtonWithState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E557709129D0DDA000EA8B6D /* UIButtonWithState.swift */; };
 		E5EAECC529CB4EC100D34047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAECC429CB4EC100D34047 /* AppDelegate.swift */; };
 		E5EAECC729CB4EC100D34047 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAECC629CB4EC100D34047 /* SceneDelegate.swift */; };
 		E5EAECC929CB4EC100D34047 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAECC829CB4EC100D34047 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E557709129D0DDA000EA8B6D /* UIButtonWithState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonWithState.swift; sourceTree = "<group>"; };
 		E5EAECC129CB4EC100D34047 /* Reverse words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EAECC429CB4EC100D34047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5EAECC629CB4EC100D34047 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				E5EAECC829CB4EC100D34047 /* ViewController.swift */,
+				E557709129D0DDA000EA8B6D /* UIButtonWithState.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5EAECCF29CB4EC100D34047 /* Reverse_words.xcdatamodeld in Sources */,
+				E557709229D0DDA000EA8B6D /* UIButtonWithState.swift in Sources */,
 				E5EAECC929CB4EC100D34047 /* ViewController.swift in Sources */,
 				E5EAECC529CB4EC100D34047 /* AppDelegate.swift in Sources */,
 				E5EAECDF29CB59E600D34047 /* ReverseModel.swift in Sources */,

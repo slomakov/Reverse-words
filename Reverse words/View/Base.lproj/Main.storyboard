@@ -44,7 +44,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkt-bU-Y7z">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkt-bU-Y7z">
                                                         <rect key="frame" x="0.0" y="292" width="393" height="87.666666666666686"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" systemColor="linkColor"/>
@@ -74,7 +74,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvv-WV-KeU" userLabel="Bottom View">
                                         <rect key="frame" x="0.0" y="379.66666666666674" width="393" height="379.33333333333326"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHF-6B-hVl">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHF-6B-hVl" customClass="UIButtonWithState" customModule="Reverse_words" customModuleProvider="target">
                                                 <rect key="frame" x="86.666666666666686" y="309.33333333333331" width="220" height="50"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <constraints>
@@ -86,7 +86,7 @@
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="reverseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhr-c5-oFG"/>
+                                                    <action selector="reverseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVC-cO-Dqe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -118,9 +118,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="reverseButton" destination="EHF-6B-hVl" id="mMs-62-wHm"/>
-                        <outlet property="reversedText" destination="zkt-bU-Y7z" id="F1I-3x-BBs"/>
-                        <outlet property="textToReverse" destination="jmD-kJ-HpT" id="9K4-Wl-7lg"/>
+                        <outlet property="reverseButton" destination="EHF-6B-hVl" id="mhA-j9-oX0"/>
+                        <outlet property="reversedTextLabel" destination="zkt-bU-Y7z" id="plX-Dg-vRl"/>
+                        <outlet property="textToReverseTextField" destination="jmD-kJ-HpT" id="nGZ-R7-Duo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

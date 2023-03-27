@@ -9,46 +9,45 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let rm = ReverseModel()
+    let reverseModel = ReverseModel()
 
     @IBOutlet weak var reverseButton: UIButton!
-    @IBOutlet weak var textToReverse: UITextField!
-    @IBOutlet weak var reversedText: UILabel!
+    @IBOutlet weak var textToReverseTextField: UITextField!
+    @IBOutlet weak var reversedTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        isTextFieldEmpty()
+        disableReverseButtonIfNoText()
     }
-
-
-    @IBAction func reverseButtonPressed(_ sender: UIButton) {
-        if let titleLabel = sender.titleLabel {
-            if titleLabel.text == "Reverse" {
-                reversedText.text = rm.reverseString(textToReverse.text!)
-                sender.setTitle("Clear", for: .normal)
-            } else if titleLabel.text == "Clear" {
-                textToReverse.text?.removeAll()
-                reversedText.text?.removeAll()
-                isTextFieldEmpty()
-                sender.setTitle("Reverse", for: .normal)
-            }
+    
+    @IBAction func reverseButtonPressed(_ sender: UIButtonWithState) {
+        if !sender.isReversed {
+            reversedTextLabel.text = reverseModel.reverseString(textToReverseTextField.text!)
+            sender.setTitle("Clear", for: .normal)
+            sender.isReversed = true
+        } else {
+            textToReverseTextField.text?.removeAll()
+            reversedTextLabel.text?.removeAll()
+            disableReverseButtonIfNoText()
+            sender.setTitle("Reverse", for: .normal)
+            sender.isReversed = false
         }
     }
     
-    func isTextFieldEmpty() {
+    func disableReverseButtonIfNoText() {
         reverseButton.isEnabled = false
-        textToReverse.addTarget(self, action: #selector(textFieldIsNotEmpty), for: .editingChanged)
+        textToReverseTextField.addTarget(self, action: #selector(disableReverseButton), for: .editingChanged)
        }
     
-    @objc func textFieldIsNotEmpty(sender: UITextField) {
+    @objc func disableReverseButton(sender: UITextField) {
 
-        sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
+        sender.text = sender.text
         guard
-          let text = textToReverse.text, !text.isEmpty
+          let text = textToReverseTextField.text, !text.isEmpty
           
           else
         {
-          self.reverseButton.isEnabled = false
+          reverseButton.isEnabled = false
           return
         }
         reverseButton.isEnabled = true
