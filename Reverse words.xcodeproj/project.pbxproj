@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E54C155229D320BC007E6C3C /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C155129D320BC007E6C3C /* Roboto-Regular.ttf */; };
 		E557709229D0DDA000EA8B6D /* UIButtonWithState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E557709129D0DDA000EA8B6D /* UIButtonWithState.swift */; };
 		E5EAECC529CB4EC100D34047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAECC429CB4EC100D34047 /* AppDelegate.swift */; };
 		E5EAECC729CB4EC100D34047 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAECC629CB4EC100D34047 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E54C155129D320BC007E6C3C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		E557709129D0DDA000EA8B6D /* UIButtonWithState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonWithState.swift; sourceTree = "<group>"; };
 		E5EAECC129CB4EC100D34047 /* Reverse words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EAECC429CB4EC100D34047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E54C155029D32074007E6C3C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E54C155129D320BC007E6C3C /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E5EAECB829CB4EC100D34047 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 				E5EAECDB29CB4F7500D34047 /* View */,
 				E5EAECDD29CB4FEC00D34047 /* Controller */,
 				E5EAECD229CB4EC200D34047 /* LaunchScreen.storyboard */,
+				E54C155029D32074007E6C3C /* Fonts */,
 				E5EAECD029CB4EC200D34047 /* Assets.xcassets */,
 				E5EAECD529CB4EC200D34047 /* Info.plist */,
 				E5EAECCD29CB4EC100D34047 /* Reverse_words.xcdatamodeld */,
@@ -161,6 +172,7 @@
 			files = (
 				E5EAECD429CB4EC200D34047 /* LaunchScreen.storyboard in Resources */,
 				E5EAECD129CB4EC200D34047 /* Assets.xcassets in Resources */,
+				E54C155229D320BC007E6C3C /* Roboto-Regular.ttf in Resources */,
 				E5EAECCC29CB4EC100D34047 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
