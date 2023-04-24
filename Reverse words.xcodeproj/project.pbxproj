@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5245E7829F07EA9000E09B5 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5245E7729F07EA9000E09B5 /* Roboto-Bold.ttf */; };
 		E54C155229D320BC007E6C3C /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C155129D320BC007E6C3C /* Roboto-Regular.ttf */; };
 		E557709229D0DDA000EA8B6D /* UIButtonWithState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E557709129D0DDA000EA8B6D /* UIButtonWithState.swift */; };
 		E5ABB2FC29EFE8690053B913 /* ReverseWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ABB2FB29EFE8690053B913 /* ReverseWordsTests.swift */; };
+		E5B9308129F5C37700D4010B /* ReverseWordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9308029F5C37700D4010B /* ReverseWordsUITests.swift */; };
 		E5EAECC529CB4EC100D34047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAECC429CB4EC100D34047 /* AppDelegate.swift */; };
 		E5EAECC729CB4EC100D34047 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAECC629CB4EC100D34047 /* SceneDelegate.swift */; };
 		E5EAECC929CB4EC100D34047 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAECC829CB4EC100D34047 /* ViewController.swift */; };
@@ -28,13 +30,23 @@
 			remoteGlobalIDString = E5EAECC029CB4EC100D34047;
 			remoteInfo = "Reverse words";
 		};
+		E5B9308429F5C37700D4010B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5EAECB929CB4EC100D34047 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5EAECC029CB4EC100D34047;
+			remoteInfo = "Reverse words";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E5245E7729F07EA9000E09B5 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		E54C155129D320BC007E6C3C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		E557709129D0DDA000EA8B6D /* UIButtonWithState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonWithState.swift; sourceTree = "<group>"; };
 		E5ABB2F929EFE8690053B913 /* ReverseWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5ABB2FB29EFE8690053B913 /* ReverseWordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsTests.swift; sourceTree = "<group>"; };
+		E5B9307E29F5C37700D4010B /* Reverse wordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse wordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B9308029F5C37700D4010B /* ReverseWordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsUITests.swift; sourceTree = "<group>"; };
 		E5EAECC129CB4EC100D34047 /* Reverse words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EAECC429CB4EC100D34047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5EAECC629CB4EC100D34047 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +67,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5B9307B29F5C37700D4010B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5EAECBE29CB4EC100D34047 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E54C155129D320BC007E6C3C /* Roboto-Regular.ttf */,
+				E5245E7729F07EA9000E09B5 /* Roboto-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -81,11 +101,20 @@
 			path = ReverseWordsTests;
 			sourceTree = "<group>";
 		};
+		E5B9307F29F5C37700D4010B /* Reverse wordsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E5B9308029F5C37700D4010B /* ReverseWordsUITests.swift */,
+			);
+			path = "Reverse wordsUITests";
+			sourceTree = "<group>";
+		};
 		E5EAECB829CB4EC100D34047 = {
 			isa = PBXGroup;
 			children = (
 				E5EAECC329CB4EC100D34047 /* Reverse words */,
 				E5ABB2FA29EFE8690053B913 /* ReverseWordsTests */,
+				E5B9307F29F5C37700D4010B /* Reverse wordsUITests */,
 				E5EAECC229CB4EC100D34047 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +124,7 @@
 			children = (
 				E5EAECC129CB4EC100D34047 /* Reverse words.app */,
 				E5ABB2F929EFE8690053B913 /* ReverseWordsTests.xctest */,
+				E5B9307E29F5C37700D4010B /* Reverse wordsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +192,24 @@
 			productReference = E5ABB2F929EFE8690053B913 /* ReverseWordsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E5B9307D29F5C37700D4010B /* Reverse wordsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5B9308829F5C37700D4010B /* Build configuration list for PBXNativeTarget "Reverse wordsUITests" */;
+			buildPhases = (
+				E5B9307A29F5C37700D4010B /* Sources */,
+				E5B9307B29F5C37700D4010B /* Frameworks */,
+				E5B9307C29F5C37700D4010B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5B9308529F5C37700D4010B /* PBXTargetDependency */,
+			);
+			name = "Reverse wordsUITests";
+			productName = "Reverse wordsUITests";
+			productReference = E5B9307E29F5C37700D4010B /* Reverse wordsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E5EAECC029CB4EC100D34047 /* Reverse words */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5EAECD829CB4EC200D34047 /* Build configuration list for PBXNativeTarget "Reverse words" */;
@@ -194,6 +242,10 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = E5EAECC029CB4EC100D34047;
 					};
+					E5B9307D29F5C37700D4010B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E5EAECC029CB4EC100D34047;
+					};
 					E5EAECC029CB4EC100D34047 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -214,6 +266,7 @@
 			targets = (
 				E5EAECC029CB4EC100D34047 /* Reverse words */,
 				E5ABB2F829EFE8690053B913 /* ReverseWordsTests */,
+				E5B9307D29F5C37700D4010B /* Reverse wordsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,12 +279,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5B9307C29F5C37700D4010B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5EAECBF29CB4EC100D34047 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E5EAECD429CB4EC200D34047 /* LaunchScreen.storyboard in Resources */,
 				E5EAECD129CB4EC200D34047 /* Assets.xcassets in Resources */,
+				E5245E7829F07EA9000E09B5 /* Roboto-Bold.ttf in Resources */,
 				E54C155229D320BC007E6C3C /* Roboto-Regular.ttf in Resources */,
 				E5EAECCC29CB4EC100D34047 /* Main.storyboard in Resources */,
 			);
@@ -268,6 +329,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E5B9307A29F5C37700D4010B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B9308129F5C37700D4010B /* ReverseWordsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5EAECBD29CB4EC100D34047 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,6 +357,11 @@
 			isa = PBXTargetDependency;
 			target = E5EAECC029CB4EC100D34047 /* Reverse words */;
 			targetProxy = E5ABB2FD29EFE8690053B913 /* PBXContainerItemProxy */;
+		};
+		E5B9308529F5C37700D4010B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5EAECC029CB4EC100D34047 /* Reverse words */;
+			targetProxy = E5B9308429F5C37700D4010B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -344,6 +418,40 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reverse words.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Reverse words";
+			};
+			name = Release;
+		};
+		E5B9308629F5C37700D4010B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GJVZ3R5TMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios.stanislav.Reverse-wordsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Reverse words";
+			};
+			name = Debug;
+		};
+		E5B9308729F5C37700D4010B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GJVZ3R5TMH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios.stanislav.Reverse-wordsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Reverse words";
 			};
 			name = Release;
 		};
@@ -527,6 +635,15 @@
 			buildConfigurations = (
 				E5ABB2FF29EFE8690053B913 /* Debug */,
 				E5ABB30029EFE8690053B913 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5B9308829F5C37700D4010B /* Build configuration list for PBXNativeTarget "Reverse wordsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5B9308629F5C37700D4010B /* Debug */,
+				E5B9308729F5C37700D4010B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -13,11 +13,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var reverseButton: UIButton!
     @IBOutlet weak var textToReverseTextField: UITextField!
     @IBOutlet weak var reversedTextLabel: UILabel!
+    @IBOutlet weak var textFieldBottomBorder: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textToReverseTextField.addTarget(self, action: #selector(disableReverseButtonIfNoText), for: .editingChanged)
-        textToReverseTextField.addBottomBorder()
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
 
     @IBAction func reverseButtonPressed(_ sender: UIButtonWithState) {
@@ -26,19 +28,18 @@ class ViewController: UIViewController {
             sender.setTitle("Clear", for: .normal)
             sender.isReversed = true
             textToReverseTextField.endEditing(true)
-            textToReverseTextField.addBottomBorder(color: UIColor.gray)
+            textFieldBottomBorder.backgroundColor = UIColor.gray
         } else {
             textToReverseTextField.text?.removeAll()
             reversedTextLabel.text?.removeAll()
             reverseButton.isEnabled = false
             sender.setTitle("Reverse", for: .normal)
-            textToReverseTextField.addBottomBorder(color: UIColor.gray)
             sender.isReversed = false
         }
     }
 
     @IBAction func editingDidBegan(_ sender: UITextField) {
-        textToReverseTextField.addBottomBorder(color: UIColor.blue)
+        textFieldBottomBorder.backgroundColor = UIColor.blue
     }
 
     @objc func disableReverseButtonIfNoText(sender: UITextField) {
@@ -51,15 +52,5 @@ class ViewController: UIViewController {
             return
         }
         reverseButton.isEnabled = true
-    }
-}
-
-extension UITextField {
-    func addBottomBorder(color: UIColor = UIColor.gray) {
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 3)
-        bottomLine.backgroundColor = color.cgColor
-        borderStyle = .none
-        layer.addSublayer(bottomLine)
     }
 }

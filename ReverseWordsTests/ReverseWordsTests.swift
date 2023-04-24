@@ -12,10 +12,7 @@ final class ReverseWordsTests: XCTestCase {
     let reverseModel = ReverseModel()
 
     func testReverseWords() {
-        let result = reverseModel.reverseString("qwer")
-        let expectedResult = "rewq"
-
-        let cases = [
+        let cases: [(data: String, expected: String)] = [
             ("qwer", "rewq"),
             ("QWER", "REWQ"),
             ("qw er", "wq re"),
