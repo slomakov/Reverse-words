@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nLP-K5-Nzr">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Reverse Words-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_words" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,20 +25,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9l-Tk-eae" userLabel="Top background">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="128"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Eo7-5Y-HIM"/>
-                                </constraints>
-                            </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-4n-agT">
-                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                                <color key="barTintColor" systemColor="systemGray6Color"/>
-                                <items>
-                                    <navigationItem title="Reverse Words" id="FMn-4e-3Ni"/>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLj-Ag-GFx">
                                 <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <subviews>
@@ -139,18 +125,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KLj-Ag-GFx" firstAttribute="top" secondItem="v2Z-4n-agT" secondAttribute="bottom" id="QRA-Jq-Kpp"/>
-                            <constraint firstAttribute="trailing" secondItem="v2Z-4n-agT" secondAttribute="trailing" id="YUI-Zp-Uea"/>
+                            <constraint firstItem="KLj-Ag-GFx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bF3-Ax-ZGF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KLj-Ag-GFx" secondAttribute="trailing" id="d6P-4p-uch"/>
-                            <constraint firstItem="v2Z-4n-agT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f88-Pf-Ixc"/>
-                            <constraint firstItem="s9l-Tk-eae" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fAV-Mp-lKr"/>
-                            <constraint firstItem="s9l-Tk-eae" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gGQ-yS-oLg"/>
                             <constraint firstItem="KLj-Ag-GFx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n4S-Lz-NGR"/>
                             <constraint firstItem="KLj-Ag-GFx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rAQ-69-MfO"/>
-                            <constraint firstItem="s9l-Tk-eae" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wPY-3H-Oog"/>
-                            <constraint firstItem="v2Z-4n-agT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zsg-sQ-wtW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Reverse Words" id="xh6-BG-kXG"/>
                     <connections>
                         <outlet property="reverseButton" destination="eNk-Lx-KGt" id="Vhd-1L-IUV"/>
                         <outlet property="reversedTextLabel" destination="zkt-bU-Y7z" id="plX-Dg-vRl"/>
@@ -160,7 +141,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="1058.4615384615383" y="-34.834123222748815"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mAz-xL-Xje">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nLP-K5-Nzr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="56X-tu-jl4">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rxg-P7-J86"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FRC-7y-Odi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.23076923076923" y="-34.834123222748815"/>
         </scene>
     </scenes>
     <resources>
