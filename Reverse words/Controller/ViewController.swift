@@ -10,47 +10,41 @@ import UIKit
 class ViewController: UIViewController {
     let reverseModel = ReverseModel()
 
-    @IBOutlet weak var reverseButton: UIButton!
-    @IBOutlet weak var textToReverseTextField: UITextField!
+    @IBOutlet weak var toReverseTextField: UITextField!
+    @IBOutlet weak var defaultToCustomToggle: UISegmentedControl!
+    @IBOutlet weak var textToIgnoreField: UITextField!
     @IBOutlet weak var reversedTextLabel: UILabel!
-    @IBOutlet weak var textFieldBottomBorder: UIView!
+    @IBOutlet weak var defaultExcludeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textToReverseTextField.addTarget(self, action: #selector(disableReverseButtonIfNoText), for: .editingChanged)
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
+        textToIgnoreField.isHidden = true
     }
 
-    @IBAction func reverseButtonPressed(_ sender: UIButtonWithState) {
-        if !sender.isReversed {
-            reversedTextLabel.text = reverseModel.reverseString(textToReverseTextField.text!)
-            sender.setTitle("Clear", for: .normal)
-            sender.isReversed = true
-            textToReverseTextField.endEditing(true)
-            textFieldBottomBorder.backgroundColor = UIColor.gray
-        } else {
-            textToReverseTextField.text?.removeAll()
-            reversedTextLabel.text?.removeAll()
-            reverseButton.isEnabled = false
-            sender.setTitle("Reverse", for: .normal)
-            sender.isReversed = false
+    
+    @IBAction func ruleSwitched(_ sender: UISegmentedControl) {
+        if defaultToCustomToggle.selectedSegmentIndex == 0 {
+            defaultExcludeLabel.isHidden = false
+            textToIgnoreField.isHidden = true
+        } else if defaultToCustomToggle.selectedSegmentIndex == 1 {
+            defaultExcludeLabel.isHidden = true
+            textToIgnoreField.isHidden = false
         }
     }
-
-    @IBAction func editingDidBegan(_ sender: UITextField) {
-        textFieldBottomBorder.backgroundColor = UIColor.blue
-    }
-
-    @objc func disableReverseButtonIfNoText(sender: UITextField) {
-        sender.text = sender.text
-        guard
-            let text = textToReverseTextField.text, !text.isEmpty
-            else
-        {
-            reverseButton.isEnabled = false
+    
+    @IBAction func resultButtonPressed(_ sender: UIButton) {
+        guard let textToReverse = toReverseTextField.text else {
             return
         }
-        reverseButton.isEnabled = true
+        guard let excludeInReverse = textToIgnoreField.text else {
+            return
+        }
+
+        let rule: ExclusionRules =
+        (defaultToCustomToggle.selectedSegmentIndex == 0) ? .defaultReverse :
+            .customReverse
+        reversedTextLabel.text = reverseModel.reverseString(textToReverse, rule: rule, exclude: excludeInReverse)
     }
 }
