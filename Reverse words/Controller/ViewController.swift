@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textToIgnoreField: UITextField!
     @IBOutlet weak var reversedTextLabel: UILabel!
     @IBOutlet weak var defaultExcludeLabel: UILabel!
+    var rule: ExclusionRules = .defaultReverse
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,23 +29,31 @@ class ViewController: UIViewController {
         if defaultToCustomToggle.selectedSegmentIndex == 0 {
             defaultExcludeLabel.isHidden = false
             textToIgnoreField.isHidden = true
+            rule = .defaultReverse
+            textEditingChange()
         } else if defaultToCustomToggle.selectedSegmentIndex == 1 {
             defaultExcludeLabel.isHidden = true
             textToIgnoreField.isHidden = false
+            rule = .customReverse
+            textEditingChange()
         }
     }
-    
-    @IBAction func resultButtonPressed(_ sender: UIButton) {
+
+    @IBAction func textRevertEditingChange(_ sender: UITextField) {
+        textEditingChange()
+    }
+
+    @IBAction func textExcludeEditingChange(_ sender: UITextField) {
+        textEditingChange()
+    }
+
+    private func textEditingChange() {
         guard let textToReverse = toReverseTextField.text else {
             return
         }
         guard let excludeInReverse = textToIgnoreField.text else {
             return
         }
-
-        let rule: ExclusionRules =
-        (defaultToCustomToggle.selectedSegmentIndex == 0) ? .defaultReverse :
-            .customReverse
         reversedTextLabel.text = reverseModel.reverseString(textToReverse, rule: rule, exclude: excludeInReverse)
     }
 }

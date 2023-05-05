@@ -24,6 +24,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textRevertEditingChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="WEl-ta-I06"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-vg-Bdf">
                                 <rect key="frame" x="16" y="211" width="358" height="41"/>
@@ -45,6 +48,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textExcludeEditingChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="BT1-Pf-Cvd"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic symbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rla-5l-7su" userLabel="Default Exclude Label">
                                 <rect key="frame" x="16" y="271" width="358" height="30"/>
@@ -55,19 +61,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXw-G6-o8C">
-                                <rect key="frame" x="149.33333333333334" y="351" width="91.333333333333343" height="44"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Result">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="resultButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uzL-tt-AnC"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apy-GW-hOB" userLabel="Reversed Text Label">
-                                <rect key="frame" x="16" y="415" width="358" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apy-GW-hOB" userLabel="Reversed Text Label">
+                                <rect key="frame" x="16" y="394.66666666666669" width="358" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9M-vm-D0l">
+                                <rect key="frame" x="160" y="346" width="70.333333333333314" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -75,14 +77,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iXw-G6-o8C" firstAttribute="top" secondItem="sfm-Wc-4DU" secondAttribute="bottom" constant="30" id="AWI-V0-YmU"/>
-                            <constraint firstItem="iXw-G6-o8C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BZA-Dl-bvA"/>
-                            <constraint firstItem="Apy-GW-hOB" firstAttribute="top" secondItem="iXw-G6-o8C" secondAttribute="bottom" constant="20" id="DQW-8I-wh1"/>
+                            <constraint firstItem="Apy-GW-hOB" firstAttribute="top" secondItem="a9M-vm-D0l" secondAttribute="bottom" constant="20" id="4BR-4Q-TIa"/>
+                            <constraint firstItem="a9M-vm-D0l" firstAttribute="top" secondItem="sfm-Wc-4DU" secondAttribute="bottom" constant="25" id="CFt-6R-PYa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jQl-vg-Bdf" secondAttribute="trailing" constant="16" id="EiK-qm-wey"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Pc-Ra-iDY" secondAttribute="trailing" constant="16" id="VeP-IO-GCv"/>
                             <constraint firstItem="sfm-Wc-4DU" firstAttribute="top" secondItem="jQl-vg-Bdf" secondAttribute="bottom" constant="20" id="W6o-vg-YT3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Apy-GW-hOB" secondAttribute="trailing" constant="16" id="XV4-FE-GhN"/>
                             <constraint firstItem="jQl-vg-Bdf" firstAttribute="top" secondItem="2Pc-Ra-iDY" secondAttribute="bottom" constant="20" id="YcY-BM-UgT"/>
+                            <constraint firstItem="a9M-vm-D0l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d5k-ee-7uh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfm-Wc-4DU" secondAttribute="trailing" constant="16" id="dEh-Q9-oXb"/>
                             <constraint firstItem="jQl-vg-Bdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l9P-78-Y7T"/>
                             <constraint firstItem="rla-5l-7su" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lbP-dh-mRV"/>
