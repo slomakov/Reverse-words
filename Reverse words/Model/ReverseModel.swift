@@ -26,7 +26,7 @@ struct ReverseModel {
         var leftIndex = 0
         var rightIndex = characters.count - 1
 
-        shouldSkipCharReverse = exclude.isEmpty ? reverseDefault : reverseCustom
+        shouldSkipCharReverse = rule == .defaultReverse ? reverseDefault : reverseCustom
 
         if rule == .customReverse && exclude.isEmpty {
             return String(word.reversed())
