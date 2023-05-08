@@ -9,14 +9,14 @@ import Foundation
 
 struct ReverseModel {
 
-    func reverseString(_ words: String, rule: ExclusionRules, exclude: String = "") -> String {
+    func reverseString(_ words: String, rule: ExclusionRule, exclude: String = "") -> String {
         let result = words.components(separatedBy: " ")
             .map { reverseStringSwapAt($0, rule: rule, exclude: exclude) }
             .joined(separator: " ")
         return String(result)
     }
 
-    private func reverseStringSwapAt(_ word: String, rule: ExclusionRules, exclude: String) -> String {
+    private func reverseStringSwapAt(_ word: String, rule: ExclusionRule, exclude: String) -> String {
         guard !word.isEmpty else {
             return word
         }
@@ -56,6 +56,6 @@ struct ReverseModel {
     }
 }
 
-enum ExclusionRules {
+enum ExclusionRule {
     case defaultReverse, customReverse
 }

@@ -16,11 +16,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var reversedTextLabel: UILabel!
     @IBOutlet weak var defaultExcludeLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private func bind() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
+    }
+
+    private func configure() {
         textToIgnoreField.isHidden = true
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bind()
+        configure()
     }
 
     
@@ -32,19 +40,24 @@ class ViewController: UIViewController {
             defaultExcludeLabel.isHidden = true
             textToIgnoreField.isHidden = false
         }
+        reversedTextLabel.text = ""
     }
-    
+
     @IBAction func resultButtonPressed(_ sender: UIButton) {
         guard let textToReverse = toReverseTextField.text else {
             return
         }
-        guard let excludeInReverse = textToIgnoreField.text else {
-            return
-        }
 
-        let rule: ExclusionRules =
-        (defaultToCustomToggle.selectedSegmentIndex == 0) ? .defaultReverse :
-            .customReverse
-        reversedTextLabel.text = reverseModel.reverseString(textToReverse, rule: rule, exclude: excludeInReverse)
+        var reversedText: String
+
+        if defaultToCustomToggle.selectedSegmentIndex == 0 {
+            reversedText = reverseModel.reverseString(textToReverse, rule: .defaultReverse)
+        } else {
+            guard let excludeInReverse = textToIgnoreField.text else {
+                return
+            }
+            reversedText = reverseModel.reverseString(textToReverse, rule: .customReverse, exclude: excludeInReverse)
+        }
+        reversedTextLabel.text = reversedText
     }
 }
